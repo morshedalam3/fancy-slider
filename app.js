@@ -43,7 +43,7 @@ const getImages = (query) => {
     .then(response => response.json())
     .then(data => showImages(data.hits))
     .catch(err => console.log(err))
-  }, 3000);
+  }, 2000);
 }
 
 let slideIndex = 0;
