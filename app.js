@@ -1,4 +1,4 @@
-// extra part add mistake
+// extra part explain mistake resolved
 // add-1 : spinner
 // add-2 : setTimeout.(was mistake when submit)
 
