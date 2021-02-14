@@ -9,18 +9,14 @@ document.getElementById('search')
 .addEventListener("keypress", function(event) {
     if(event.key === 'Enter'){
         document.getElementById('search-btn').click();
-
     }
 });
 // selected image 
 let sliders = [];
-
-
 // If this key doesn't work
 // Find the name in the url and go to their website
 // to create your own api key
 const KEY = '15674931-a9d714b6e9d654524df198e00&q';
-
 // show images 
 const showImages = (images) => {
   imagesArea.style.display = 'block';
@@ -34,7 +30,7 @@ const showImages = (images) => {
     div.innerHTML = ` <img class="img-fluid img-thumbnail" onclick=selectItem(event,"${image.webformatURL}") src="${image.webformatURL}" alt="${image.tags}">`;
     gallery.appendChild(div)
   });
-}
+};
 
 const getImages = (query) => {
   setTimeout(() =>{
@@ -43,8 +39,8 @@ const getImages = (query) => {
     .then(response => response.json())
     .then(data => showImages(data.hits))
     .catch(err => console.log(err))
-  }, 2000);
-}
+  }, 1000);
+};
 
 let slideIndex = 0;
 const selectItem = (event, img) => {
